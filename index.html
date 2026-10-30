@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Speaking Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div class="app-icon">S</div>
+      <div>
+        <h1>AI Speaking Practice</h1>
+        <p class="subtitle">Build confidence, one answer at a time.</p>
+      </div>
+    </header>
+
+<section class="practice-card">
+    <div class="section-heading">
+    <span class="eyebrow">IELTS PRACTICE</span>
+    <span id="progress-text">Question 1 of 4</span>
+    </div>
+
+    <div class="progress-track">
+    <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <p class="part-label">SPEAKING PART 1</p>
+    <h2 id="question-text">Loading question...</h2>
+    <p class="instruction">Think about your answer, then record yourself speaking in English.</p>
+
+    <div class="recording-panel">
+    <div class="recording-heading">
+        <span class="status-dot" id="status-dot"></span>
+        <p id="recording-status" aria-live="polite">Ready to record</p>
+    </div>
+
+    <div class="recording-buttons">
+        <button id="start-recording" class="button button-primary">
+        <span aria-hidden="true">●</span>Start Recording
+        </button>
+
+        <button id="stop-recording" class="button button-stop" disabled> Stop Recording</button>
+        </div>
+
+        
+<div id="audio-container" class="audio-container" hidden>
+  <p class="audio-label">Your recording</p>
+  <audio id="audio-playback" controls></audio>
+
+  <button id="transcribe-button" class="button button-primary">
+    Transcribe Answer
+  </button>
+
+  <p id="transcription-status" aria-live="polite"></p>
+
+  <div id="transcript-container" hidden>
+    <p class="audio-label">Your transcript</p>
+    <p id="transcript-text" class="transcript-text"></p>
+  </div>
+</div>
+
+
+      <p id="error-message" class="error-message" role="alert" hidden></p>
+
+      <div class="navigation">
+        <button id="restart-button" class="button button-secondary">
+          Start Again
+        </button>
+
+        <button id="next-button" class="button button-primary">
+          Next Question →
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      Your recordings stay in this browser session. They are not uploaded
+      to an AI service.
+    </footer>
+  </main>
+</body>
+</html>
